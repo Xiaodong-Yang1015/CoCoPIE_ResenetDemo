@@ -16,7 +16,17 @@ This guide will help you convert and benchmark ONNX models using OpenVINO. Follo
    ```
    Replace `<your openvino>` with the path to your OpenVINO model XML file.
 
-Please refer to the official OpenVINO documentation for more detailed instructions and troubleshooting.
+   Please refer to the official OpenVINO documentation for more detailed instructions and troubleshooting.
+
+4. Testing the accuracy of the ONNX model using the following command:
+
+   ```
+   python inference_onnx.py --onnx-path <path_to_onnx_model> --data <path_to_data>
+   ```
+
+   Note: The `inference_onnx.py` script uses ONNX Runtime with CPU support, and the number of threads is set to 12.
+
+
 
 
 **Testing Platform:**

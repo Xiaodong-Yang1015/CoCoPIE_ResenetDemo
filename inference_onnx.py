@@ -82,7 +82,7 @@ def onnx_inference_imagenet(args):
     model = onnx.load_model(onnx_path)
     # 创建一个SessionOptions对象
     rtconfig = ort.SessionOptions()
-    number_of_threads = multiprocessing.cpu_count()
+    number_of_threads = 12
     rtconfig.intra_op_num_threads = number_of_threads
     # rtconfig.execution_mode = ort.ExecutionMode.ORT_SEQUENTIAL
     rtconfig.execution_mode = ort.ExecutionMode.ORT_PARALLEL
