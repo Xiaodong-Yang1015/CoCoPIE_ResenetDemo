@@ -24,3 +24,5 @@ if __name__ == "__main__":
     if os.path.isdir(onnx_path):
         for sub_path in glob.glob(os.path.join(onnx_path, "*.onnx")):
             convert(core, sub_path, output_path)
+    else:
+        convert(core, onnx_path, output_path)
